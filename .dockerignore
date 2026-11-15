@@ -1,0 +1,9 @@
+.venv
+.git
+__pycache__
+.pytest_cache
+reports/presentation
+.jupyter
+.pytest_cache
+work
+reports/logs/pdf_previews
