@@ -1,0 +1,73 @@
+{
+  "model": "multioutput log price path",
+  "selected_trial": {
+    "id": "rf_12_d6",
+    "algorithm": "rf",
+    "window": 12,
+    "depth": 6,
+    "leaf": 12,
+    "trees": 120
+  },
+  "features": [
+    "local_yoy_known2",
+    "local_qoq_known2",
+    "local_yoy_acceleration_known2",
+    "local_volatility4_known2",
+    "relative_price_known2",
+    "primary_secondary_ratio_known2",
+    "peer_yoy_known2",
+    "log_known_price",
+    "policy_rate_lag1",
+    "policy_rate_change4q_lag1",
+    "inflation_yoy_lag1",
+    "national_wage_yoy_lag1",
+    "national_mortgage_rate_lag1",
+    "national_real_credit_flow_yoy_lag1",
+    "national_sloos_demand_lag1",
+    "national_sloos_easing_lag1",
+    "market_decline_breadth_known",
+    "market_negative_yoy_breadth_known",
+    "hedonic_qoq_known",
+    "hedonic_yoy_known",
+    "credit_count_yoy_lag2",
+    "credit_count_qoq_lag2",
+    "credit_count_acceleration_lag2",
+    "credit_count_t4_yoy_lag2"
+  ],
+  "categoricals": [
+    "area",
+    "market"
+  ],
+  "horizons": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "reference_origin": "2026Q3",
+  "build_date": "2026-11-15",
+  "reference_is_past": true,
+  "not_live_forecast": true,
+  "target": "city-market mean transaction price PLN/m2, not individual property",
+  "known_price_quarters": [
+    "2026Q1"
+  ],
+  "training_max_label_ord": 225,
+  "training_rows": 408,
+  "training_seconds": 0.11457340000197291,
+  "model_bytes": 456648,
+  "threads": 2,
+  "seed": 42,
+  "source_manifest_sha256": "40212366f0abfeb94df71467bdb83f99909c0c372596d571401d65bb609447a0",
+  "training_data_sha256": "2354a135cbe3d763005ae827e459e1c822d5f9b3cd353e31d52bd3691e799689",
+  "independent_unseen_test": false,
+  "intervals": "No calibrated prediction interval claimed; point forecast only.",
+  "availability": "Assumed quarterly lags; revised data, not historical vintages; reference2026Q3 generated November15. h0 is a nowcast of the reference quarter.",
+  "software": {
+    "pandas": "3.1.1",
+    "numpy": "2.5.4",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0"
+  }
+}

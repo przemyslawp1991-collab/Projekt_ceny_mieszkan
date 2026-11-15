@@ -1,0 +1,34 @@
+{
+  "fresh_environment": true,
+  "offline_install": true,
+  "checks": {
+    "data/processed/training_wide.csv": {
+      "original_sha256": "2354a135cbe3d763005ae827e459e1c822d5f9b3cd353e31d52bd3691e799689",
+      "clean_copy_sha256": "2354a135cbe3d763005ae827e459e1c822d5f9b3cd353e31d52bd3691e799689",
+      "byte_identical": true,
+      "max_numeric_difference": 0.0
+    },
+    "reports/tables/predictions.csv": {
+      "original_sha256": "3321a62278d18a67eaeef7b279eb476ec426ebbbb63b4ef7020a374fef1ebf79",
+      "clean_copy_sha256": "ea36b21a4720a52622f092490f25788062b599103730e3dbd85c96a6fe0f3917",
+      "byte_identical": false,
+      "max_numeric_difference": 3.637978807091713e-12
+    },
+    "reports/tables/current_forecasts.csv": {
+      "original_sha256": "4f047645aedf0e5ee69ae49da12d3feb5f819392d5f2b03c9be45b21c9a5d2e9",
+      "clean_copy_sha256": "076f4d9cb28d6f73f21622f1caa8a971ed2a452c80dd0439634d2a29fd807927",
+      "byte_identical": false,
+      "max_numeric_difference": 3.637978807091713e-12
+    },
+    "models/model.pkl": {
+      "original_sha256": "75e4d7ab223d5a6766f2144ec190bace8549a428b2ebe90fda5809f4b2ea86e0",
+      "clean_copy_sha256": "75e4d7ab223d5a6766f2144ec190bace8549a428b2ebe90fda5809f4b2ea86e0",
+      "byte_identical": true
+    }
+  },
+  "tests": "8 passed",
+  "result": "Model and feature dataset byte-identical; forecasts agree within1e-7; RF parallel reduction changes last floating-point digits.",
+  "numeric_tolerance": 1e-07,
+  "docker_available": false,
+  "make_available": false
+}

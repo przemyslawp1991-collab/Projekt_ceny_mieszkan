@@ -1,0 +1,8 @@
+{
+  "delta_MAPE_pp": -1.446226141873551,
+  "CI95_low": -2.0152025042222386,
+  "CI95_high": -0.9596752600593398,
+  "block_length_quarters": 6,
+  "resamples": 2000,
+  "interpretation": "Retrospective diagnostic after prior inspection, not confirmatory evidence; overlapping paths and shared macro factors."
+}

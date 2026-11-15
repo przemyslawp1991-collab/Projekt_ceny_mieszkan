@@ -1,0 +1,26 @@
+Prepared provider observations: 9337
+Training groups: 2379 long horizon rows: 11895
+Tuned rf_12_d4
+Tuned rf_20_d4
+Tuned rf_12_d6
+Tuned ridge_12_a100
+Tuned ridge_20_a1000
+Tuned hgb_12_l7
+Tuned hgb_20_l7
+Validation winner: rf_12_d6
+                phase           model  horizon    n  MAPE_pct  MAE_pln_m2  RMSE_pln_m2
+historical_diagnostic historical_mean        4 1394  6.996718  535.756970   703.681269
+historical_diagnostic        momentum        4 1394  7.474410  637.210949   973.034206
+historical_diagnostic       no_change        4 1394 10.697861  873.946429  1101.516767
+historical_diagnostic  selected_model        4 1394  5.550492  431.114799   593.763859
+          locked_test       hgb_12_l7        4   34 12.703261 1481.767223  1664.414087
+          locked_test       hgb_20_l7        4   34  7.329873  853.968209  1010.462479
+          locked_test historical_mean        4   34 13.414208 1556.585575  1775.538176
+          locked_test        momentum        4   34 17.874865 2067.822960  2433.087827
+          locked_test       no_change        4   34  3.875757  434.572448   564.388934
+          locked_test        rf_12_d4        4   34 13.571087 1561.782330  1701.963720
+          locked_test        rf_12_d6        4   34 13.758183 1582.239528  1722.223828
+          locked_test        rf_20_d4        4   34 10.064877 1155.579082  1304.084776
+          locked_test   ridge_12_a100        4   34 13.423322 1548.202518  1685.226267
+          locked_test  ridge_20_a1000        4   34 11.610532 1333.187426  1469.541300
+Report and7figures saved

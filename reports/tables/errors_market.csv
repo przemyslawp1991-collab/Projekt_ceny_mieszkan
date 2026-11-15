@@ -1,0 +1,9 @@
+model,market,size,mean
+historical_mean,primary,697,6.843096614015785
+historical_mean,secondary,697,7.150339580825595
+momentum,primary,697,8.251496310708601
+momentum,secondary,697,6.6973244515099175
+no_change,primary,697,10.42813191047977
+no_change,secondary,697,10.967589797206156
+selected_model,primary,697,5.397580570557949
+selected_model,secondary,697,5.70340334053633

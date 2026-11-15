@@ -1,0 +1,21 @@
+{
+  "raw_provider_observations": 9337,
+  "price_min_quarter": "2006Q3",
+  "price_max_quarter": "2026Q2",
+  "duplicate_keys": 0,
+  "nonpositive_prices": 0,
+  "mortgage_count_quarters": 71,
+  "macro_missing": {
+    "policy_rate": 0,
+    "cpi": 0,
+    "inflation": 4,
+    "policy_change": 4,
+    "wage": 29,
+    "wage_yoy": 33,
+    "sloos_easing": 43,
+    "sloos_demand": 43,
+    "mortgage_rate": 88,
+    "mortgage_flow": 88,
+    "real_flow_yoy": 92
+  }
+}

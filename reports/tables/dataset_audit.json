@@ -1,0 +1,15 @@
+{
+  "long_rows": 11895,
+  "independent_city_origin_groups": 2379,
+  "unique_origins": 70,
+  "numeric_features": 24,
+  "categorical_features": 2,
+  "series": 34,
+  "cities": 17,
+  "min_origin": "2008Q1",
+  "max_origin": "2025Q2",
+  "reference_origin": "2026Q3",
+  "test_origin": "2025Q2",
+  "raw_price_observations": 9337,
+  "warning": "Five horizons share one origin vector; long rows are not independent markets or cycles."
+}

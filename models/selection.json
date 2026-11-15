@@ -1,0 +1,14 @@
+{
+  "winner": "rf_12_d6",
+  "spec": {
+    "id": "rf_12_d6",
+    "algorithm": "rf",
+    "window": 12,
+    "depth": 6,
+    "leaf": 12,
+    "trees": 120
+  },
+  "selection_before_test": true,
+  "feature_hash": "2354a135cbe3d763005ae827e459e1c822d5f9b3cd353e31d52bd3691e799689",
+  "validation_score": 4.8557003249043005
+}

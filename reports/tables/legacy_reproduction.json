@@ -1,0 +1,8 @@
+{
+  "rows": 34,
+  "finite": true,
+  "max_price_difference_pln_m2": 3.637978807091713e-12,
+  "historical_h4_MAPE_pct": 5.600658563347869,
+  "prediction_matrix_sha256": "9c9431c2841748d0b732a02bdc74d616a18779a60dedf8a9c03e90099acd4096",
+  "note": "Original estimator retained independently and its historical41origins reproduced; the new model is rebuilt from original provider files and tuned separately."
+}

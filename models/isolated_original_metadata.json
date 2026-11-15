@@ -1,0 +1,17 @@
+{
+  "issued_date_local": "2026-11-15",
+  "reference_origin": "2026Q3",
+  "known_price": "2026Q1 under fixed lag2 fallback",
+  "target_end": "2027Q3",
+  "earliest_assumed_final_outcome_availability": "2028Q1",
+  "independent_holdout": false,
+  "selection_after_historical_comparison": true,
+  "research_only": true,
+  "no_old_registry_change": true,
+  "range_method": "past-only absolute relative OOF residual, last20maturedquarters permarket/horizon, minimum8; all cities pooled withinmarket; dependent observations, no guaranteed80coverage",
+  "training_latest_origin": "2024Q4",
+  "max_training_label": 225,
+  "origin_ord": 226,
+  "historical_feature_reconstruction_matches": true,
+  "prices_source_sha256": "098dbc6c86328e4a9db663f5ec2739d5e0540f69e0630735e6280ba343282174"
+}

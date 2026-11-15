@@ -1,0 +1,89 @@
+{
+  "config": {
+    "seed": 42,
+    "threads": 2,
+    "reference_origin": "2026Q3",
+    "test_origin": "2025Q2",
+    "horizons": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "validation_origins": [
+      "2015Q1",
+      "2017Q1",
+      "2019Q1",
+      "2021Q1",
+      "2023Q1",
+      "2023Q3"
+    ],
+    "bootstrap_repetitions": 2000,
+    "historical_origins": [
+      "2015Q1",
+      "2025Q1"
+    ],
+    "trials": [
+      {
+        "id": "rf_12_d4",
+        "algorithm": "rf",
+        "window": 12,
+        "depth": 4,
+        "leaf": 20,
+        "trees": 120
+      },
+      {
+        "id": "rf_20_d4",
+        "algorithm": "rf",
+        "window": 20,
+        "depth": 4,
+        "leaf": 20,
+        "trees": 120
+      },
+      {
+        "id": "rf_12_d6",
+        "algorithm": "rf",
+        "window": 12,
+        "depth": 6,
+        "leaf": 12,
+        "trees": 120
+      },
+      {
+        "id": "ridge_12_a100",
+        "algorithm": "ridge",
+        "window": 12,
+        "alpha": 100
+      },
+      {
+        "id": "ridge_20_a1000",
+        "algorithm": "ridge",
+        "window": 20,
+        "alpha": 1000
+      },
+      {
+        "id": "hgb_12_l7",
+        "algorithm": "hgb",
+        "window": 12,
+        "leaves": 7,
+        "iterations": 100,
+        "l2": 10
+      },
+      {
+        "id": "hgb_20_l7",
+        "algorithm": "hgb",
+        "window": 20,
+        "leaves": 7,
+        "iterations": 100,
+        "l2": 10
+      }
+    ]
+  },
+  "feature_hash": "2354a135cbe3d763005ae827e459e1c822d5f9b3cd353e31d52bd3691e799689",
+  "independent_unseen_test": false,
+  "disclosure": "Historical data and previous price models had already been inspected. Test2025Q2 is locked for this package, not a pristine prospective holdout.",
+  "selection": "minimum mean h4 MAPE across six development origins, tie ID; no test selection",
+  "label_rule": "origin+6 strictly before decision; latest matured origins window",
+  "test_cases": 34,
+  "test_path_points": 170
+}

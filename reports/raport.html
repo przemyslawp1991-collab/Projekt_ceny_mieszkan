@@ -1,0 +1,210 @@
+<!doctype html><html lang="pl"><meta charset="utf-8"><title>Prognoza cen mieszkań — raport</title><style>body{font:17px/1.6 system-ui;max-width:1100px;margin:45px auto;padding:0 24px;color:#172c40}h1,h2{color:#123e60}table{border-collapse:collapse;font-size:14px}th,td{padding:8px 12px;border-bottom:1px solid #cbd5df}img{max-width:100%}aside{background:#eef4fa;padding:20px}</style>
+ <h1>Prognozowanie średnich cen transakcyjnych mieszkań</h1><p>Samodzielny projekt zaliczeniowy Data Science •15.11.2026</p>
+ <aside>Cel: prognoza średniej miejskiej PLN/m² dla17 miast i2 rynków w pięciu punktach q…q+4. h0 jest nowcastem. Projekt nie wycenia pojedynczego lokalu i nie dostarcza sygnału sprzedaży.</aside>
+ <h2>Dane i jednostka obserwacji</h2><p>NBP BaRN (ceny transakcyjne i indeksy hedoniczne), GUS (płace), BIS (inflacja i stopy), NBP MIR/SLOOS (koszt i popyt na kredyt), AMRON-SARFiN (liczby kredytów). Ceny obejmują2006Q3–2026Q2. Pliki źródłowe zachowano z hashami SHA256. Licencje i odnośniki: docs/SOURCES.md.</p>
+ <p>11895 rekordów zadania wielohoryzontowego odpowiada2379 grupom miasto–rynek–kwartał i70 kwartałom. Pięć horyzontów współdzieli cechy: nie są to niezależne cykle.24 cechy liczbowe i2 kategorie. Surowych odczytów cen/indeksów:9337. Nie interpolowano cen i nie dodawano danych syntetycznych.</p>
+ <h2>Przygotowanie i EDA</h2><p>Rozdzielono średnie ceny, oferty i indeksy. Oferty nie są etykietą. Zachowano skrajne wartości, bo mogą oznaczać zmianę cyklu lub strukturę transakcji; sprawdzono dodatniość, klucze i kompletność. Braki kredytu i indeksów są strukturalne; imputacja medianą i wskaźnik braków są dopasowane wyłącznie na treningu. GUS i BIS nie są danymi mikro o konkretnej nieruchomości.</p>
+ <img src="figures/01_prices.png"><img src="figures/02_missing.png"><img src="figures/03_correlations.png">
+ <h2>Protokół czasowy i modele</h2><p>Ceny wejściowe mają opóźnienie2 kwartałów, skracane do1 wyłącznie przy kalendarzu publikacji; makro q−1, liczby kredytów q−2. Cały komplet miasto/rynek/horyzont pozostaje w jednym foldzie. Etykiety q…q+4 uznaje się za dostępne w q+6; muszą być ściśle wcześniejsze niż chwila prognozy. Transformacje są wewnątrz Pipeline. Część założeń publikacyjnych jest przybliżona; posiadamy zrewidowane szeregi, a nie historyczne vintages.</p>
+ <p>Porównano Random Forest, Ridge i wielowyjściowy HistGradientBoosting.7 konfiguracji ×6 czasowych foldów. Selekcja: średnia MAPE h4, wyłącznie walidacja. Wybrano <b>rf_12_d6</b>. Wszystkie próby, parametry, czasy i błędy zapisano w tuning_all_trials.csv.</p><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>trial</th>
+      <th>MAPE_h4</th>
+      <th>MAPE_all</th>
+      <th>seconds</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>rf_12_d6</td>
+      <td>4.856</td>
+      <td>3.523</td>
+      <td>0.902</td>
+    </tr>
+    <tr>
+      <td>rf_12_d4</td>
+      <td>4.901</td>
+      <td>3.577</td>
+      <td>0.911</td>
+    </tr>
+    <tr>
+      <td>hgb_12_l7</td>
+      <td>4.914</td>
+      <td>3.533</td>
+      <td>12.559</td>
+    </tr>
+    <tr>
+      <td>hgb_20_l7</td>
+      <td>5.223</td>
+      <td>3.979</td>
+      <td>16.714</td>
+    </tr>
+    <tr>
+      <td>rf_20_d4</td>
+      <td>5.382</td>
+      <td>3.890</td>
+      <td>1.018</td>
+    </tr>
+    <tr>
+      <td>ridge_20_a1000</td>
+      <td>5.692</td>
+      <td>4.018</td>
+      <td>0.080</td>
+    </tr>
+    <tr>
+      <td>ridge_12_a100</td>
+      <td>9.479</td>
+      <td>7.541</td>
+      <td>0.076</td>
+    </tr>
+  </tbody>
+</table>
+ <h2>Wyniki i uczciwa interpretacja</h2><p>Poprzednie eksperymenty już oglądały znaczną część historii. Poniższy wynik2015–2025 jest diagnostyką retrospektywną, także nakładającą się na foldy wyboru. Nie stanowi niezależnego potwierdzenia przewagi. Zablokowany dla tej paczki pojedynczy origin2025Q2 to34 grupy i170 punktów ścieżki; ceny historyczne były dostępne wcześniej, więc nie jest to dziewiczy test prospektywny. Nie zmieniano wyboru modelu po tym teście.</p><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>phase</th>
+      <th>model</th>
+      <th>horizon</th>
+      <th>n</th>
+      <th>MAPE_pct</th>
+      <th>MAE_pln_m2</th>
+      <th>RMSE_pln_m2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>historical_diagnostic</td>
+      <td>historical_mean</td>
+      <td>4</td>
+      <td>1394</td>
+      <td>6.997</td>
+      <td>535.757</td>
+      <td>703.681</td>
+    </tr>
+    <tr>
+      <td>historical_diagnostic</td>
+      <td>momentum</td>
+      <td>4</td>
+      <td>1394</td>
+      <td>7.474</td>
+      <td>637.211</td>
+      <td>973.034</td>
+    </tr>
+    <tr>
+      <td>historical_diagnostic</td>
+      <td>no_change</td>
+      <td>4</td>
+      <td>1394</td>
+      <td>10.698</td>
+      <td>873.946</td>
+      <td>1101.517</td>
+    </tr>
+    <tr>
+      <td>historical_diagnostic</td>
+      <td>selected_model</td>
+      <td>4</td>
+      <td>1394</td>
+      <td>5.550</td>
+      <td>431.115</td>
+      <td>593.764</td>
+    </tr>
+    <tr>
+      <td>locked_test</td>
+      <td>hgb_12_l7</td>
+      <td>4</td>
+      <td>34</td>
+      <td>12.703</td>
+      <td>1481.767</td>
+      <td>1664.414</td>
+    </tr>
+    <tr>
+      <td>locked_test</td>
+      <td>hgb_20_l7</td>
+      <td>4</td>
+      <td>34</td>
+      <td>7.330</td>
+      <td>853.968</td>
+      <td>1010.462</td>
+    </tr>
+    <tr>
+      <td>locked_test</td>
+      <td>historical_mean</td>
+      <td>4</td>
+      <td>34</td>
+      <td>13.414</td>
+      <td>1556.586</td>
+      <td>1775.538</td>
+    </tr>
+    <tr>
+      <td>locked_test</td>
+      <td>momentum</td>
+      <td>4</td>
+      <td>34</td>
+      <td>17.875</td>
+      <td>2067.823</td>
+      <td>2433.088</td>
+    </tr>
+    <tr>
+      <td>locked_test</td>
+      <td>no_change</td>
+      <td>4</td>
+      <td>34</td>
+      <td>3.876</td>
+      <td>434.572</td>
+      <td>564.389</td>
+    </tr>
+    <tr>
+      <td>locked_test</td>
+      <td>rf_12_d4</td>
+      <td>4</td>
+      <td>34</td>
+      <td>13.571</td>
+      <td>1561.782</td>
+      <td>1701.964</td>
+    </tr>
+    <tr>
+      <td>locked_test</td>
+      <td>rf_12_d6</td>
+      <td>4</td>
+      <td>34</td>
+      <td>13.758</td>
+      <td>1582.240</td>
+      <td>1722.224</td>
+    </tr>
+    <tr>
+      <td>locked_test</td>
+      <td>rf_20_d4</td>
+      <td>4</td>
+      <td>34</td>
+      <td>10.065</td>
+      <td>1155.579</td>
+      <td>1304.085</td>
+    </tr>
+    <tr>
+      <td>locked_test</td>
+      <td>ridge_12_a100</td>
+      <td>4</td>
+      <td>34</td>
+      <td>13.423</td>
+      <td>1548.203</td>
+      <td>1685.226</td>
+    </tr>
+    <tr>
+      <td>locked_test</td>
+      <td>ridge_20_a1000</td>
+      <td>4</td>
+      <td>34</td>
+      <td>11.611</td>
+      <td>1333.187</td>
+      <td>1469.541</td>
+    </tr>
+  </tbody>
+</table>
+ <aside><b>Ostatnia data ujawniła utratę przewagi:</b> wybrany RF ma13,76% MAPE, podczas gdy utrzymanie ostatniej ceny ma3,88%. Prognozowany średni wzrost od znanej ceny wynosił17,1%, rzeczywisty3,1%. To obraz nadmiernej kontynuacji wzrostu, nie dowód przyczynowego wpływu konkretnego czynnika. Nie potwierdzono stabilnej przewagi operacyjnej.</aside>
+ <p>Różnica historycznej MAPE model−średnia:-1.446 pp; przedział z bootstrapu bloków6kwartałów:[-2.015;-0.960] pp. Ujemna różnica oznacza mniejszy błąd modelu. Nie jest to przedział przyszłej ceny ani potwierdzenie przyczynowości. Wspólne makro,17 miast i zachodzące na siebie ścieżki ograniczają niezależność.</p>
+ <img src="figures/04_comparison.png"><img src="figures/05_stability.png">
+ <h2>Wyjaśnianie predykcji</h2><p>Permutacja pojedynczych cech na ostatnim foldzie walidacyjnym mierzy zmianę MAPE. Współzależne cechy mogą dzielić znaczenie, a ujemne znaczenie jest możliwe. local_sensitivity.csv pokazuje zmianę prognozy Warszawy po zastąpieniu każdej cechy medianą treningową. To lokalna analiza wrażliwości, nie addytywne SHAP i nie efekt przyczynowy stóp lub dopłat.</p><img src="figures/06_importance.png">
+ <h2>Prognoza i zastosowanie</h2><p>models/model.pkl to wybrany model przetrenowany dla odniesienia2026Q3. Paczka powstała w listopadzie2026, więc nie udajemy, że została wystawiona w2026Q3. Ścieżka obejmuje2026Q3–2027Q3, wejściowa cena pochodzi z2026Q1. Można porównywać miasta/rynki i budować scenariusz budżetu. Brak skalibrowanych przedziałów; nie należy traktować punktów jako gwarancji. Oryginalny RF zachowano oddzielnie jako isolated_original_rf.joblib.</p><img src="figures/07_forecast.png">
+ <h2>Wdrożenie, testy, zasoby</h2><p>FastAPI/Pydantic /predict, Streamlit, testy pytest, schemat wejścia i workflow CI. make all oraz Windows run.ps1 odtwarzają tabele, model i wykresy z lokalnych niezmiennych źródeł. Wyniki czasu i rozmiaru: green_it.json. Bez GPU; dwa wątki. Nie mierzyliśmy energii ani CO₂. Obraz Docker przygotowano, ale lokalnie brak silnika Docker; workflow CI wymaga uruchomienia po publikacji repozytorium.</p>
+ <h2>Ograniczenia i dalsza walidacja</h2><p>Średnia cena zmienia się wraz z miksem transakcji; brak indywidualnych cech lokali, długiej historii niezależnych załamań i pewnych vintages. Rzadkie spadki oraz interwencje polityczne mogą być trudne do uchwycenia. Kolejny rzetelny krok: zamrożony protokół i prospektywna ocena nowych kwartałów. Nie dodawano modułu płynności, alarmów sprzedaży ani sztucznych kryzysów.</p></html>

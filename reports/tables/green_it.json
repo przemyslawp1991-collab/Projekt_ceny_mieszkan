@@ -1,0 +1,8 @@
+{
+  "production_train_seconds": 0.11457340000197291,
+  "mean_historical_fit_seconds": 0.14399208293137392,
+  "model_bytes": 456648,
+  "threads": 2,
+  "gpu": false,
+  "carbon_emissions_measured": false
+}

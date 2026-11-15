@@ -1,0 +1,169 @@
+{
+  "dataset": {
+    "long_rows": 11895,
+    "independent_city_origin_groups": 2379,
+    "unique_origins": 70,
+    "numeric_features": 24,
+    "categorical_features": 2,
+    "series": 34,
+    "cities": 17,
+    "min_origin": "2008Q1",
+    "max_origin": "2025Q2",
+    "reference_origin": "2026Q3",
+    "test_origin": "2025Q2",
+    "raw_price_observations": 9337,
+    "warning": "Five horizons share one origin vector; long rows are not independent markets or cycles."
+  },
+  "selection": {
+    "winner": "rf_12_d6",
+    "spec": {
+      "id": "rf_12_d6",
+      "algorithm": "rf",
+      "window": 12,
+      "depth": 6,
+      "leaf": 12,
+      "trees": 120
+    },
+    "selection_before_test": true,
+    "feature_hash": "2354a135cbe3d763005ae827e459e1c822d5f9b3cd353e31d52bd3691e799689",
+    "validation_score": 4.8557003249043005
+  },
+  "bootstrap": {
+    "delta_MAPE_pp": -1.446226141873551,
+    "CI95_low": -2.0152025042222386,
+    "CI95_high": -0.9596752600593398,
+    "block_length_quarters": 6,
+    "resamples": 2000,
+    "interpretation": "Retrospective diagnostic after prior inspection, not confirmatory evidence; overlapping paths and shared macro factors."
+  },
+  "historical_h4": [
+    {
+      "phase": "historical_diagnostic",
+      "model": "selected_model",
+      "horizon": 4,
+      "n": 1394,
+      "MAPE_pct": 5.550491955547139,
+      "MAE_pln_m2": 431.11479882607864,
+      "RMSE_pln_m2": 593.763859491042
+    },
+    {
+      "phase": "historical_diagnostic",
+      "model": "historical_mean",
+      "horizon": 4,
+      "n": 1394,
+      "MAPE_pct": 6.99671809742069,
+      "MAE_pln_m2": 535.7569696548723,
+      "RMSE_pln_m2": 703.6812691215913
+    },
+    {
+      "phase": "historical_diagnostic",
+      "model": "momentum",
+      "horizon": 4,
+      "n": 1394,
+      "MAPE_pct": 7.47441038110926,
+      "MAE_pln_m2": 637.2109487719839,
+      "RMSE_pln_m2": 973.0342056966284
+    },
+    {
+      "phase": "historical_diagnostic",
+      "model": "no_change",
+      "horizon": 4,
+      "n": 1394,
+      "MAPE_pct": 10.697860853842961,
+      "MAE_pln_m2": 873.9464285276697,
+      "RMSE_pln_m2": 1101.5167672641444
+    }
+  ],
+  "locked_test_h4": [
+    {
+      "phase": "locked_test",
+      "model": "hgb_12_l7",
+      "horizon": 4,
+      "n": 34,
+      "MAPE_pct": 12.703261352842214,
+      "MAE_pln_m2": 1481.767222798189,
+      "RMSE_pln_m2": 1664.4140871983225
+    },
+    {
+      "phase": "locked_test",
+      "model": "hgb_20_l7",
+      "horizon": 4,
+      "n": 34,
+      "MAPE_pct": 7.329872972321657,
+      "MAE_pln_m2": 853.9682090037568,
+      "RMSE_pln_m2": 1010.4624788378214
+    },
+    {
+      "phase": "locked_test",
+      "model": "historical_mean",
+      "horizon": 4,
+      "n": 34,
+      "MAPE_pct": 13.414208302912227,
+      "MAE_pln_m2": 1556.5855753223525,
+      "RMSE_pln_m2": 1775.5381755478818
+    },
+    {
+      "phase": "locked_test",
+      "model": "momentum",
+      "horizon": 4,
+      "n": 34,
+      "MAPE_pct": 17.874865115652227,
+      "MAE_pln_m2": 2067.822959816717,
+      "RMSE_pln_m2": 2433.087827033332
+    },
+    {
+      "phase": "locked_test",
+      "model": "no_change",
+      "horizon": 4,
+      "n": 34,
+      "MAPE_pct": 3.8757566057296677,
+      "MAE_pln_m2": 434.5724477650226,
+      "RMSE_pln_m2": 564.3889340731746
+    },
+    {
+      "phase": "locked_test",
+      "model": "rf_12_d4",
+      "horizon": 4,
+      "n": 34,
+      "MAPE_pct": 13.571087242179075,
+      "MAE_pln_m2": 1561.7823298809362,
+      "RMSE_pln_m2": 1701.9637198508542
+    },
+    {
+      "phase": "locked_test",
+      "model": "rf_12_d6",
+      "horizon": 4,
+      "n": 34,
+      "MAPE_pct": 13.758183155066867,
+      "MAE_pln_m2": 1582.239527952891,
+      "RMSE_pln_m2": 1722.223827680461
+    },
+    {
+      "phase": "locked_test",
+      "model": "rf_20_d4",
+      "horizon": 4,
+      "n": 34,
+      "MAPE_pct": 10.06487732821588,
+      "MAE_pln_m2": 1155.5790816213516,
+      "RMSE_pln_m2": 1304.08477624108
+    },
+    {
+      "phase": "locked_test",
+      "model": "ridge_12_a100",
+      "horizon": 4,
+      "n": 34,
+      "MAPE_pct": 13.423321568447788,
+      "MAE_pln_m2": 1548.2025184050576,
+      "RMSE_pln_m2": 1685.2262674839412
+    },
+    {
+      "phase": "locked_test",
+      "model": "ridge_20_a1000",
+      "horizon": 4,
+      "n": 34,
+      "MAPE_pct": 11.610531885570692,
+      "MAE_pln_m2": 1333.1874261280282,
+      "RMSE_pln_m2": 1469.5413000190583
+    }
+  ]
+}
