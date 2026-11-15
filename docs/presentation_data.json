@@ -1,0 +1,1037 @@
+{
+  "scores": [
+    {
+      "phase": "historical_diagnostic",
+      "model": "historical_mean",
+      "horizon": 0,
+      "n": 1394,
+      "MAPE_pct": 3.0650296566236324,
+      "MAE_pln_m2": 228.07030772987108,
+      "RMSE_pln_m2": 322.3117069610388
+    },
+    {
+      "phase": "historical_diagnostic",
+      "model": "historical_mean",
+      "horizon": 1,
+      "n": 1394,
+      "MAPE_pct": 4.123072920758791,
+      "MAE_pln_m2": 308.69409568320833,
+      "RMSE_pln_m2": 420.37432095756395
+    },
+    {
+      "phase": "historical_diagnostic",
+      "model": "historical_mean",
+      "horizon": 2,
+      "n": 1394,
+      "MAPE_pct": 5.086175861863716,
+      "MAE_pln_m2": 383.5930755564969,
+      "RMSE_pln_m2": 513.3855493761536
+    },
+    {
+      "phase": "historical_diagnostic",
+      "model": "historical_mean",
+      "horizon": 3,
+      "n": 1394,
+      "MAPE_pct": 6.079293307658347,
+      "MAE_pln_m2": 463.3496859911564,
+      "RMSE_pln_m2": 610.4767961685872
+    },
+    {
+      "phase": "historical_diagnostic",
+      "model": "historical_mean",
+      "horizon": 4,
+      "n": 1394,
+      "MAPE_pct": 6.99671809742069,
+      "MAE_pln_m2": 535.7569696548723,
+      "RMSE_pln_m2": 703.6812691215913
+    },
+    {
+      "phase": "historical_diagnostic",
+      "model": "momentum",
+      "horizon": 0,
+      "n": 1394,
+      "MAPE_pct": 2.918858949215387,
+      "MAE_pln_m2": 226.64504485988277,
+      "RMSE_pln_m2": 347.54820157642257
+    },
+    {
+      "phase": "historical_diagnostic",
+      "model": "momentum",
+      "horizon": 1,
+      "n": 1394,
+      "MAPE_pct": 4.109898521506588,
+      "MAE_pln_m2": 331.64056780476926,
+      "RMSE_pln_m2": 506.4189887708184
+    },
+    {
+      "phase": "historical_diagnostic",
+      "model": "momentum",
+      "horizon": 2,
+      "n": 1394,
+      "MAPE_pct": 5.262432337097887,
+      "MAE_pln_m2": 436.1087825936232,
+      "RMSE_pln_m2": 663.4380636064744
+    },
+    {
+      "phase": "historical_diagnostic",
+      "model": "momentum",
+      "horizon": 3,
+      "n": 1394,
+      "MAPE_pct": 6.436279835410282,
+      "MAE_pln_m2": 543.196593734561,
+      "RMSE_pln_m2": 825.7174345288852
+    },
+    {
+      "phase": "historical_diagnostic",
+      "model": "momentum",
+      "horizon": 4,
+      "n": 1394,
+      "MAPE_pct": 7.47441038110926,
+      "MAE_pln_m2": 637.2109487719839,
+      "RMSE_pln_m2": 973.0342056966284
+    },
+    {
+      "phase": "historical_diagnostic",
+      "model": "no_change",
+      "horizon": 0,
+      "n": 1394,
+      "MAPE_pct": 3.6764241829540576,
+      "MAE_pln_m2": 283.10825755581004,
+      "RMSE_pln_m2": 416.0137067204551
+    },
+    {
+      "phase": "historical_diagnostic",
+      "model": "no_change",
+      "horizon": 1,
+      "n": 1394,
+      "MAPE_pct": 5.428891996923801,
+      "MAE_pln_m2": 426.1537599525803,
+      "RMSE_pln_m2": 597.7305490912138
+    },
+    {
+      "phase": "historical_diagnostic",
+      "model": "no_change",
+      "horizon": 2,
+      "n": 1394,
+      "MAPE_pct": 7.173868413198549,
+      "MAE_pln_m2": 571.5593037831775,
+      "RMSE_pln_m2": 772.3632070860325
+    },
+    {
+      "phase": "historical_diagnostic",
+      "model": "no_change",
+      "horizon": 3,
+      "n": 1394,
+      "MAPE_pct": 8.949114443363555,
+      "MAE_pln_m2": 722.5299472323765,
+      "RMSE_pln_m2": 941.5023665698199
+    },
+    {
+      "phase": "historical_diagnostic",
+      "model": "no_change",
+      "horizon": 4,
+      "n": 1394,
+      "MAPE_pct": 10.697860853842961,
+      "MAE_pln_m2": 873.9464285276697,
+      "RMSE_pln_m2": 1101.5167672641444
+    },
+    {
+      "phase": "historical_diagnostic",
+      "model": "selected_model",
+      "horizon": 0,
+      "n": 1394,
+      "MAPE_pct": 2.7653952305085716,
+      "MAE_pln_m2": 209.41017004185724,
+      "RMSE_pln_m2": 307.6901757061306
+    },
+    {
+      "phase": "historical_diagnostic",
+      "model": "selected_model",
+      "horizon": 1,
+      "n": 1394,
+      "MAPE_pct": 3.5448099680255063,
+      "MAE_pln_m2": 271.87428678151946,
+      "RMSE_pln_m2": 390.40919672431556
+    },
+    {
+      "phase": "historical_diagnostic",
+      "model": "selected_model",
+      "horizon": 2,
+      "n": 1394,
+      "MAPE_pct": 4.257670942152052,
+      "MAE_pln_m2": 331.4086638382582,
+      "RMSE_pln_m2": 468.0038845428039
+    },
+    {
+      "phase": "historical_diagnostic",
+      "model": "selected_model",
+      "horizon": 3,
+      "n": 1394,
+      "MAPE_pct": 4.955084399738785,
+      "MAE_pln_m2": 386.49810381965256,
+      "RMSE_pln_m2": 534.8516136547745
+    },
+    {
+      "phase": "historical_diagnostic",
+      "model": "selected_model",
+      "horizon": 4,
+      "n": 1394,
+      "MAPE_pct": 5.550491955547139,
+      "MAE_pln_m2": 431.11479882607864,
+      "RMSE_pln_m2": 593.763859491042
+    },
+    {
+      "phase": "locked_test",
+      "model": "hgb_12_l7",
+      "horizon": 0,
+      "n": 34,
+      "MAPE_pct": 3.0769080981067027,
+      "MAE_pln_m2": 352.8756883941391,
+      "RMSE_pln_m2": 450.2070099877124
+    },
+    {
+      "phase": "locked_test",
+      "model": "hgb_12_l7",
+      "horizon": 1,
+      "n": 34,
+      "MAPE_pct": 5.372239823281023,
+      "MAE_pln_m2": 625.3090588195199,
+      "RMSE_pln_m2": 760.7987075243991
+    },
+    {
+      "phase": "locked_test",
+      "model": "hgb_12_l7",
+      "horizon": 2,
+      "n": 34,
+      "MAPE_pct": 8.706932958306131,
+      "MAE_pln_m2": 985.3702379237989,
+      "RMSE_pln_m2": 1117.0991284153235
+    },
+    {
+      "phase": "locked_test",
+      "model": "hgb_12_l7",
+      "horizon": 3,
+      "n": 34,
+      "MAPE_pct": 11.651387673542413,
+      "MAE_pln_m2": 1328.7940186808546,
+      "RMSE_pln_m2": 1461.3997102079006
+    },
+    {
+      "phase": "locked_test",
+      "model": "hgb_12_l7",
+      "horizon": 4,
+      "n": 34,
+      "MAPE_pct": 12.703261352842214,
+      "MAE_pln_m2": 1481.767222798189,
+      "RMSE_pln_m2": 1664.4140871983225
+    },
+    {
+      "phase": "locked_test",
+      "model": "hgb_20_l7",
+      "horizon": 0,
+      "n": 34,
+      "MAPE_pct": 3.1730000913981393,
+      "MAE_pln_m2": 362.7945163275041,
+      "RMSE_pln_m2": 438.5504631310365
+    },
+    {
+      "phase": "locked_test",
+      "model": "hgb_20_l7",
+      "horizon": 1,
+      "n": 34,
+      "MAPE_pct": 4.791524239060204,
+      "MAE_pln_m2": 552.4073535037801,
+      "RMSE_pln_m2": 664.9767821836032
+    },
+    {
+      "phase": "locked_test",
+      "model": "hgb_20_l7",
+      "horizon": 2,
+      "n": 34,
+      "MAPE_pct": 7.2121201026720465,
+      "MAE_pln_m2": 816.7883598281946,
+      "RMSE_pln_m2": 944.3097134168235
+    },
+    {
+      "phase": "locked_test",
+      "model": "hgb_20_l7",
+      "horizon": 3,
+      "n": 34,
+      "MAPE_pct": 7.742211700030922,
+      "MAE_pln_m2": 888.1173320899511,
+      "RMSE_pln_m2": 1028.1098254308583
+    },
+    {
+      "phase": "locked_test",
+      "model": "hgb_20_l7",
+      "horizon": 4,
+      "n": 34,
+      "MAPE_pct": 7.329872972321657,
+      "MAE_pln_m2": 853.9682090037568,
+      "RMSE_pln_m2": 1010.4624788378214
+    },
+    {
+      "phase": "locked_test",
+      "model": "historical_mean",
+      "horizon": 0,
+      "n": 34,
+      "MAPE_pct": 3.4010324899492597,
+      "MAE_pln_m2": 383.74149831370295,
+      "RMSE_pln_m2": 475.97374243140285
+    },
+    {
+      "phase": "locked_test",
+      "model": "historical_mean",
+      "horizon": 1,
+      "n": 34,
+      "MAPE_pct": 5.328079509791718,
+      "MAE_pln_m2": 619.0579846251686,
+      "RMSE_pln_m2": 769.0035876147746
+    },
+    {
+      "phase": "locked_test",
+      "model": "historical_mean",
+      "horizon": 2,
+      "n": 34,
+      "MAPE_pct": 8.266720754427807,
+      "MAE_pln_m2": 941.7769596457464,
+      "RMSE_pln_m2": 1103.9889649509787
+    },
+    {
+      "phase": "locked_test",
+      "model": "historical_mean",
+      "horizon": 3,
+      "n": 34,
+      "MAPE_pct": 11.279137558870074,
+      "MAE_pln_m2": 1295.468785507426,
+      "RMSE_pln_m2": 1473.2160174014443
+    },
+    {
+      "phase": "locked_test",
+      "model": "historical_mean",
+      "horizon": 4,
+      "n": 34,
+      "MAPE_pct": 13.414208302912227,
+      "MAE_pln_m2": 1556.5855753223525,
+      "RMSE_pln_m2": 1775.5381755478818
+    },
+    {
+      "phase": "locked_test",
+      "model": "momentum",
+      "horizon": 0,
+      "n": 34,
+      "MAPE_pct": 5.994107499265756,
+      "MAE_pln_m2": 680.9033497104281,
+      "RMSE_pln_m2": 849.0247385351603
+    },
+    {
+      "phase": "locked_test",
+      "model": "momentum",
+      "horizon": 1,
+      "n": 34,
+      "MAPE_pct": 8.864267867159453,
+      "MAE_pln_m2": 1023.8783760595861,
+      "RMSE_pln_m2": 1238.3373439608845
+    },
+    {
+      "phase": "locked_test",
+      "model": "momentum",
+      "horizon": 2,
+      "n": 34,
+      "MAPE_pct": 12.290967910495663,
+      "MAE_pln_m2": 1402.7012775595767,
+      "RMSE_pln_m2": 1644.4027722163485
+    },
+    {
+      "phase": "locked_test",
+      "model": "momentum",
+      "horizon": 3,
+      "n": 34,
+      "MAPE_pct": 15.489930162852932,
+      "MAE_pln_m2": 1785.357517271265,
+      "RMSE_pln_m2": 2042.5344072030691
+    },
+    {
+      "phase": "locked_test",
+      "model": "momentum",
+      "horizon": 4,
+      "n": 34,
+      "MAPE_pct": 17.874865115652227,
+      "MAE_pln_m2": 2067.822959816717,
+      "RMSE_pln_m2": 2433.087827033332
+    },
+    {
+      "phase": "locked_test",
+      "model": "no_change",
+      "horizon": 0,
+      "n": 34,
+      "MAPE_pct": 2.4474969803426343,
+      "MAE_pln_m2": 281.34132252261685,
+      "RMSE_pln_m2": 377.0534650100465
+    },
+    {
+      "phase": "locked_test",
+      "model": "no_change",
+      "horizon": 1,
+      "n": 34,
+      "MAPE_pct": 3.4804264663923394,
+      "MAE_pln_m2": 385.1414100112977,
+      "RMSE_pln_m2": 481.42617813508633
+    },
+    {
+      "phase": "locked_test",
+      "model": "no_change",
+      "horizon": 2,
+      "n": 34,
+      "MAPE_pct": 3.010325626665984,
+      "MAE_pln_m2": 332.6431733722741,
+      "RMSE_pln_m2": 447.4418266907844
+    },
+    {
+      "phase": "locked_test",
+      "model": "no_change",
+      "horizon": 3,
+      "n": 34,
+      "MAPE_pct": 3.323909947580718,
+      "MAE_pln_m2": 377.40126513690217,
+      "RMSE_pln_m2": 542.8364134584225
+    },
+    {
+      "phase": "locked_test",
+      "model": "no_change",
+      "horizon": 4,
+      "n": 34,
+      "MAPE_pct": 3.8757566057296677,
+      "MAE_pln_m2": 434.5724477650226,
+      "RMSE_pln_m2": 564.3889340731746
+    },
+    {
+      "phase": "locked_test",
+      "model": "rf_12_d4",
+      "horizon": 0,
+      "n": 34,
+      "MAPE_pct": 3.0962911304352727,
+      "MAE_pln_m2": 352.48721715041216,
+      "RMSE_pln_m2": 425.46563666889705
+    },
+    {
+      "phase": "locked_test",
+      "model": "rf_12_d4",
+      "horizon": 1,
+      "n": 34,
+      "MAPE_pct": 5.035746203864683,
+      "MAE_pln_m2": 582.6832672445333,
+      "RMSE_pln_m2": 710.4438401516848
+    },
+    {
+      "phase": "locked_test",
+      "model": "rf_12_d4",
+      "horizon": 2,
+      "n": 34,
+      "MAPE_pct": 8.291937329296772,
+      "MAE_pln_m2": 939.1484834806406,
+      "RMSE_pln_m2": 1065.0331456562624
+    },
+    {
+      "phase": "locked_test",
+      "model": "rf_12_d4",
+      "horizon": 3,
+      "n": 34,
+      "MAPE_pct": 11.227991666337852,
+      "MAE_pln_m2": 1281.7215716236735,
+      "RMSE_pln_m2": 1413.27424922763
+    },
+    {
+      "phase": "locked_test",
+      "model": "rf_12_d4",
+      "horizon": 4,
+      "n": 34,
+      "MAPE_pct": 13.571087242179075,
+      "MAE_pln_m2": 1561.7823298809362,
+      "RMSE_pln_m2": 1701.9637198508542
+    },
+    {
+      "phase": "locked_test",
+      "model": "rf_12_d6",
+      "horizon": 0,
+      "n": 34,
+      "MAPE_pct": 3.0827712895324053,
+      "MAE_pln_m2": 351.21664961583883,
+      "RMSE_pln_m2": 424.5324619329737
+    },
+    {
+      "phase": "locked_test",
+      "model": "rf_12_d6",
+      "horizon": 1,
+      "n": 34,
+      "MAPE_pct": 5.0357479437325665,
+      "MAE_pln_m2": 582.5686849962758,
+      "RMSE_pln_m2": 711.2656881888184
+    },
+    {
+      "phase": "locked_test",
+      "model": "rf_12_d6",
+      "horizon": 2,
+      "n": 34,
+      "MAPE_pct": 8.284643097483546,
+      "MAE_pln_m2": 937.734518204797,
+      "RMSE_pln_m2": 1062.136561451309
+    },
+    {
+      "phase": "locked_test",
+      "model": "rf_12_d6",
+      "horizon": 3,
+      "n": 34,
+      "MAPE_pct": 11.394105945332186,
+      "MAE_pln_m2": 1300.2407475146883,
+      "RMSE_pln_m2": 1431.6445731235294
+    },
+    {
+      "phase": "locked_test",
+      "model": "rf_12_d6",
+      "horizon": 4,
+      "n": 34,
+      "MAPE_pct": 13.758183155066867,
+      "MAE_pln_m2": 1582.239527952891,
+      "RMSE_pln_m2": 1722.223827680461
+    },
+    {
+      "phase": "locked_test",
+      "model": "rf_20_d4",
+      "horizon": 0,
+      "n": 34,
+      "MAPE_pct": 2.733209434007875,
+      "MAE_pln_m2": 312.616220048515,
+      "RMSE_pln_m2": 387.05039408227066
+    },
+    {
+      "phase": "locked_test",
+      "model": "rf_20_d4",
+      "horizon": 1,
+      "n": 34,
+      "MAPE_pct": 3.856230224642522,
+      "MAE_pln_m2": 446.16675882332754,
+      "RMSE_pln_m2": 546.1846212500888
+    },
+    {
+      "phase": "locked_test",
+      "model": "rf_20_d4",
+      "horizon": 2,
+      "n": 34,
+      "MAPE_pct": 5.597451842037238,
+      "MAE_pln_m2": 634.5803980098373,
+      "RMSE_pln_m2": 725.7073822826077
+    },
+    {
+      "phase": "locked_test",
+      "model": "rf_20_d4",
+      "horizon": 3,
+      "n": 34,
+      "MAPE_pct": 7.649669185201422,
+      "MAE_pln_m2": 873.0983203008468,
+      "RMSE_pln_m2": 988.9987604582216
+    },
+    {
+      "phase": "locked_test",
+      "model": "rf_20_d4",
+      "horizon": 4,
+      "n": 34,
+      "MAPE_pct": 10.06487732821588,
+      "MAE_pln_m2": 1155.5790816213516,
+      "RMSE_pln_m2": 1304.08477624108
+    },
+    {
+      "phase": "locked_test",
+      "model": "ridge_12_a100",
+      "horizon": 0,
+      "n": 34,
+      "MAPE_pct": 2.2064570276692907,
+      "MAE_pln_m2": 249.605082009604,
+      "RMSE_pln_m2": 308.39768864073574
+    },
+    {
+      "phase": "locked_test",
+      "model": "ridge_12_a100",
+      "horizon": 1,
+      "n": 34,
+      "MAPE_pct": 3.418328514764408,
+      "MAE_pln_m2": 387.629341285817,
+      "RMSE_pln_m2": 464.78545310444946
+    },
+    {
+      "phase": "locked_test",
+      "model": "ridge_12_a100",
+      "horizon": 2,
+      "n": 34,
+      "MAPE_pct": 4.2683839529762,
+      "MAE_pln_m2": 488.4700862365359,
+      "RMSE_pln_m2": 602.8123834825935
+    },
+    {
+      "phase": "locked_test",
+      "model": "ridge_12_a100",
+      "horizon": 3,
+      "n": 34,
+      "MAPE_pct": 8.285390611201974,
+      "MAE_pln_m2": 949.7062306540897,
+      "RMSE_pln_m2": 1090.7388700621793
+    },
+    {
+      "phase": "locked_test",
+      "model": "ridge_12_a100",
+      "horizon": 4,
+      "n": 34,
+      "MAPE_pct": 13.423321568447788,
+      "MAE_pln_m2": 1548.2025184050576,
+      "RMSE_pln_m2": 1685.2262674839412
+    },
+    {
+      "phase": "locked_test",
+      "model": "ridge_20_a1000",
+      "horizon": 0,
+      "n": 34,
+      "MAPE_pct": 2.6251538696775674,
+      "MAE_pln_m2": 298.11326724409156,
+      "RMSE_pln_m2": 365.2479172929003
+    },
+    {
+      "phase": "locked_test",
+      "model": "ridge_20_a1000",
+      "horizon": 1,
+      "n": 34,
+      "MAPE_pct": 3.7612980404519156,
+      "MAE_pln_m2": 433.516713149436,
+      "RMSE_pln_m2": 522.3204483634125
+    },
+    {
+      "phase": "locked_test",
+      "model": "ridge_20_a1000",
+      "horizon": 2,
+      "n": 34,
+      "MAPE_pct": 5.376955510025905,
+      "MAE_pln_m2": 610.8669658921702,
+      "RMSE_pln_m2": 700.5870109408414
+    },
+    {
+      "phase": "locked_test",
+      "model": "ridge_20_a1000",
+      "horizon": 3,
+      "n": 34,
+      "MAPE_pct": 8.078303779586983,
+      "MAE_pln_m2": 920.8185094788179,
+      "RMSE_pln_m2": 1044.957522295403
+    },
+    {
+      "phase": "locked_test",
+      "model": "ridge_20_a1000",
+      "horizon": 4,
+      "n": 34,
+      "MAPE_pct": 11.610531885570692,
+      "MAE_pln_m2": 1333.1874261280282,
+      "RMSE_pln_m2": 1469.5413000190583
+    }
+  ],
+  "tuning": [
+    {
+      "trial": "rf_12_d6",
+      "MAPE_h4": 4.8557003249043005,
+      "MAPE_all": 3.52325290819268,
+      "seconds": 0.9016876998357475
+    },
+    {
+      "trial": "rf_12_d4",
+      "MAPE_h4": 4.9005291046577,
+      "MAPE_all": 3.577015317749575,
+      "seconds": 0.9112305000890046
+    },
+    {
+      "trial": "hgb_12_l7",
+      "MAPE_h4": 4.914051116633607,
+      "MAPE_all": 3.5327715277894427,
+      "seconds": 12.559085899498314
+    },
+    {
+      "trial": "hgb_20_l7",
+      "MAPE_h4": 5.223164319841444,
+      "MAPE_all": 3.9787667425311497,
+      "seconds": 16.713602300034836
+    },
+    {
+      "trial": "rf_20_d4",
+      "MAPE_h4": 5.381528246272128,
+      "MAPE_all": 3.890283748067873,
+      "seconds": 1.0181271997280419
+    },
+    {
+      "trial": "ridge_20_a1000",
+      "MAPE_h4": 5.692302063322003,
+      "MAPE_all": 4.018473897299173,
+      "seconds": 0.07954389997757971
+    },
+    {
+      "trial": "ridge_12_a100",
+      "MAPE_h4": 9.478686184827502,
+      "MAPE_all": 7.541435893548077,
+      "seconds": 0.07611099979840219
+    }
+  ],
+  "warsaw_history": [
+    {
+      "quarter": "2007Q2",
+      "market": "primary",
+      "value": 7523.0
+    },
+    {
+      "quarter": "2008Q2",
+      "market": "primary",
+      "value": 8611.0
+    },
+    {
+      "quarter": "2009Q2",
+      "market": "primary",
+      "value": 7461.0
+    },
+    {
+      "quarter": "2010Q2",
+      "market": "primary",
+      "value": 7973.89213438384
+    },
+    {
+      "quarter": "2011Q2",
+      "market": "primary",
+      "value": 7526.773102662611
+    },
+    {
+      "quarter": "2012Q2",
+      "market": "primary",
+      "value": 7042.943540678168
+    },
+    {
+      "quarter": "2013Q2",
+      "market": "primary",
+      "value": 7018.096418042534
+    },
+    {
+      "quarter": "2014Q2",
+      "market": "primary",
+      "value": 7315.614550027939
+    },
+    {
+      "quarter": "2015Q2",
+      "market": "primary",
+      "value": 7509.9059543004505
+    },
+    {
+      "quarter": "2016Q2",
+      "market": "primary",
+      "value": 7582.883
+    },
+    {
+      "quarter": "2017Q2",
+      "market": "primary",
+      "value": 7682.575698500695
+    },
+    {
+      "quarter": "2018Q2",
+      "market": "primary",
+      "value": 8182.211925469966
+    },
+    {
+      "quarter": "2019Q2",
+      "market": "primary",
+      "value": 8932.04924952834
+    },
+    {
+      "quarter": "2020Q2",
+      "market": "primary",
+      "value": 9438.890761932049
+    },
+    {
+      "quarter": "2021Q2",
+      "market": "primary",
+      "value": 10695.520589276563
+    },
+    {
+      "quarter": "2022Q2",
+      "market": "primary",
+      "value": 12343.410440092872
+    },
+    {
+      "quarter": "2023Q2",
+      "market": "primary",
+      "value": 13179.729117161729
+    },
+    {
+      "quarter": "2024Q2",
+      "market": "primary",
+      "value": 15995.870719606284
+    },
+    {
+      "quarter": "2025Q2",
+      "market": "primary",
+      "value": 16386.713961050413
+    },
+    {
+      "quarter": "2026Q2",
+      "market": "primary",
+      "value": 16783.491477744396
+    },
+    {
+      "quarter": "2007Q2",
+      "market": "secondary",
+      "value": 7737.98840405399
+    },
+    {
+      "quarter": "2008Q2",
+      "market": "secondary",
+      "value": 8201.69152279001
+    },
+    {
+      "quarter": "2009Q2",
+      "market": "secondary",
+      "value": 7536.13094789073
+    },
+    {
+      "quarter": "2010Q2",
+      "market": "secondary",
+      "value": 7790.25811149702
+    },
+    {
+      "quarter": "2011Q2",
+      "market": "secondary",
+      "value": 7845.19741492661
+    },
+    {
+      "quarter": "2012Q2",
+      "market": "secondary",
+      "value": 7621.63993176005
+    },
+    {
+      "quarter": "2013Q2",
+      "market": "secondary",
+      "value": 6903.15925832803
+    },
+    {
+      "quarter": "2014Q2",
+      "market": "secondary",
+      "value": 7290.23408428326
+    },
+    {
+      "quarter": "2015Q2",
+      "market": "secondary",
+      "value": 7295.43654432192
+    },
+    {
+      "quarter": "2016Q2",
+      "market": "secondary",
+      "value": 7401.86437289142
+    },
+    {
+      "quarter": "2017Q2",
+      "market": "secondary",
+      "value": 7796.71571204144
+    },
+    {
+      "quarter": "2018Q2",
+      "market": "secondary",
+      "value": 8336.31459637101
+    },
+    {
+      "quarter": "2019Q2",
+      "market": "secondary",
+      "value": 9196.1561165766
+    },
+    {
+      "quarter": "2020Q2",
+      "market": "secondary",
+      "value": 10242.3566871792
+    },
+    {
+      "quarter": "2021Q2",
+      "market": "secondary",
+      "value": 10966.544065469589
+    },
+    {
+      "quarter": "2022Q2",
+      "market": "secondary",
+      "value": 12455.84308772129
+    },
+    {
+      "quarter": "2023Q2",
+      "market": "secondary",
+      "value": 12971.303003646337
+    },
+    {
+      "quarter": "2024Q2",
+      "market": "secondary",
+      "value": 16278.723439873127
+    },
+    {
+      "quarter": "2025Q2",
+      "market": "secondary",
+      "value": 16507.2064373036
+    },
+    {
+      "quarter": "2026Q2",
+      "market": "secondary",
+      "value": 16722.656815563725
+    }
+  ],
+  "importance": [
+    {
+      "feature": "peer_yoy_known2",
+      "delta_MAPE_pp": 0.11840131822503733,
+      "std": 0.07205945740808795
+    },
+    {
+      "feature": "hedonic_yoy_known",
+      "delta_MAPE_pp": 0.050986063436378085,
+      "std": 0.05280034479868052
+    },
+    {
+      "feature": "local_yoy_known2",
+      "delta_MAPE_pp": 0.03310420673923833,
+      "std": 0.035613596857156475
+    },
+    {
+      "feature": "local_yoy_acceleration_known2",
+      "delta_MAPE_pp": 0.030879097021059464,
+      "std": 0.027588597332984317
+    },
+    {
+      "feature": "local_qoq_known2",
+      "delta_MAPE_pp": 0.013842403813735516,
+      "std": 0.01065488787035698
+    },
+    {
+      "feature": "hedonic_qoq_known",
+      "delta_MAPE_pp": 0.003962502989554117,
+      "std": 0.012621616811467232
+    }
+  ],
+  "current": [
+    {
+      "area": "Warszawa",
+      "market": "primary",
+      "reference_origin": "2026Q3",
+      "horizon": 0,
+      "target_quarter": "2026Q3",
+      "known_price": 16470.573676205182,
+      "known_price_quarter": "2026Q1",
+      "prediction_pln_m2": 17846.0051796513
+    },
+    {
+      "area": "Warszawa",
+      "market": "primary",
+      "reference_origin": "2026Q3",
+      "horizon": 1,
+      "target_quarter": "2026Q4",
+      "known_price": 16470.573676205182,
+      "known_price_quarter": "2026Q1",
+      "prediction_pln_m2": 18499.728432224965
+    },
+    {
+      "area": "Warszawa",
+      "market": "primary",
+      "reference_origin": "2026Q3",
+      "horizon": 2,
+      "target_quarter": "2027Q1",
+      "known_price": 16470.573676205182,
+      "known_price_quarter": "2026Q1",
+      "prediction_pln_m2": 19086.980163106662
+    },
+    {
+      "area": "Warszawa",
+      "market": "primary",
+      "reference_origin": "2026Q3",
+      "horizon": 3,
+      "target_quarter": "2027Q2",
+      "known_price": 16470.573676205182,
+      "known_price_quarter": "2026Q1",
+      "prediction_pln_m2": 19475.963274970727
+    },
+    {
+      "area": "Warszawa",
+      "market": "primary",
+      "reference_origin": "2026Q3",
+      "horizon": 4,
+      "target_quarter": "2027Q3",
+      "known_price": 16470.573676205182,
+      "known_price_quarter": "2026Q1",
+      "prediction_pln_m2": 19681.788354465967
+    },
+    {
+      "area": "Warszawa",
+      "market": "secondary",
+      "reference_origin": "2026Q3",
+      "horizon": 0,
+      "target_quarter": "2026Q3",
+      "known_price": 16522.655483872208,
+      "known_price_quarter": "2026Q1",
+      "prediction_pln_m2": 18068.245900752292
+    },
+    {
+      "area": "Warszawa",
+      "market": "secondary",
+      "reference_origin": "2026Q3",
+      "horizon": 1,
+      "target_quarter": "2026Q4",
+      "known_price": 16522.655483872208,
+      "known_price_quarter": "2026Q1",
+      "prediction_pln_m2": 18916.441714206056
+    },
+    {
+      "area": "Warszawa",
+      "market": "secondary",
+      "reference_origin": "2026Q3",
+      "horizon": 2,
+      "target_quarter": "2027Q1",
+      "known_price": 16522.655483872208,
+      "known_price_quarter": "2026Q1",
+      "prediction_pln_m2": 19608.268094624254
+    },
+    {
+      "area": "Warszawa",
+      "market": "secondary",
+      "reference_origin": "2026Q3",
+      "horizon": 3,
+      "target_quarter": "2027Q2",
+      "known_price": 16522.655483872208,
+      "known_price_quarter": "2026Q1",
+      "prediction_pln_m2": 20081.730410117045
+    },
+    {
+      "area": "Warszawa",
+      "market": "secondary",
+      "reference_origin": "2026Q3",
+      "horizon": 4,
+      "target_quarter": "2027Q3",
+      "known_price": 16522.655483872208,
+      "known_price_quarter": "2026Q1",
+      "prediction_pln_m2": 20266.865809498715
+    }
+  ],
+  "green": {
+    "production_train_seconds": 0.11457340000197291,
+    "mean_historical_fit_seconds": 0.14399208293137392,
+    "model_bytes": 456648,
+    "threads": 2,
+    "gpu": false,
+    "carbon_emissions_measured": false
+  },
+  "audit": {
+    "long_rows": 11895,
+    "independent_city_origin_groups": 2379,
+    "unique_origins": 70,
+    "numeric_features": 24,
+    "categorical_features": 2,
+    "series": 34,
+    "cities": 17,
+    "min_origin": "2008Q1",
+    "max_origin": "2025Q2",
+    "reference_origin": "2026Q3",
+    "test_origin": "2025Q2",
+    "raw_price_observations": 9337,
+    "warning": "Five horizons share one origin vector; long rows are not independent markets or cycles."
+  }
+}

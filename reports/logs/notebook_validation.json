@@ -1,0 +1,17 @@
+{
+  "01_eda.ipynb": {
+    "code_cells": 7,
+    "executed": true,
+    "errors": 0
+  },
+  "02_feature_engineering.ipynb": {
+    "code_cells": 6,
+    "executed": true,
+    "errors": 0
+  },
+  "03_modeling.ipynb": {
+    "code_cells": 7,
+    "executed": true,
+    "errors": 0
+  }
+}
