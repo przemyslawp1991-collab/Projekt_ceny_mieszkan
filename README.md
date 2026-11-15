@@ -1,5 +1,7 @@
 # Prognozowanie średnich cen transakcyjnych mieszkań w Polsce
 
+Repozytorium publiczne: [https://github.com/przemyslawp1991-collab/Projekt_ceny_mieszkan](https://github.com/przemyslawp1991-collab/Projekt_ceny_mieszkan).
+
 Samodzielny projekt zaliczeniowy Data Science, wydzielony15.11.2026. Zakres: **17 miast ×2rynki ×5horyzontów**. Prognozowana jest miejska średnia cena transakcyjna w PLN/m², nie wartość konkretnego lokalu. Pozostałe eksperymenty pozostają w oryginalnym projekcie.
 
 ## Najważniejsze pliki
@@ -72,7 +74,7 @@ Schemat odrzuca nieznane miasta, niepoprawny rynek i dodatkowe pola. Wynik:5cen 
 
 Streamlit: `python -m streamlit run app.py`, http://localhost:8501 . Skrypt CLI: `python -m src.predict --area Warszawa --market secondary`.
 
-Docker: `docker build -t ceny-mieszkan .`, `docker run --rm -p 8000:8000 ceny-mieszkan`. **Plik przygotowany, obraz niezweryfikowany lokalnie: brak silnika Docker.** GitHubActions przygotowane; wykonanie po publikacji. Repozytorium lokalne ma rzeczywiste commity etapów; publiczny adres GitHub pozostaje do uzupełnienia. Nie publikowano danych zewnętrznie.
+Docker: `docker build -t ceny-mieszkan .`, `docker run --rm -p 8000:8000 ceny-mieszkan`. **Plik przygotowany, obraz niezweryfikowany lokalnie: brak silnika Docker.** GitHub Actions uruchamia testy po push i pull request. Repozytorium publiczne: https://github.com/przemyslawp1991-collab/Projekt_ceny_mieszkan; zachowano rzeczywistą historię lokalnych commitów etapów. Bieżące wyniki CI są widoczne w zakładce Actions.
 
 ## Odtwarzalność, temporal split, interpretacja
 
@@ -112,3 +114,6 @@ Wartość: odtwarzalne łączenie publicznych danych, kontrola przecieku czasowe
 GreenIT:2wątki CPU, brak GPU, krótkie okna i120drzew; rzeczywisty czas i rozmiar w reports/tables/green_it.json. Nie szacujemy CO₂ bez pomiarów energii.
 
 Materiały utworzono przy wsparciu narzędzi AI. Na obronie autor powinien umieć wyjaśnić konstrukcję celu, opóźnienia, purging, baseline i porażkę na ostatnim okresie; plan w docs/OBRONA.md.
+
+
+PDF i slajdy dokumentują zamrożoną analizę przygotowaną przed publikacją. Bieżący status publikacji i CI znajduje się w tym README oraz w repozytorium.

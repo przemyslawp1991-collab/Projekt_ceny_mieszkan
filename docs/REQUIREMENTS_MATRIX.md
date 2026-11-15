@@ -22,7 +22,7 @@ Dokument odniesienia: wymagania_kursu.pdf (kopia oryginalnego PDF użytkownika).
 | Makefile / one-command | all,data,train,evaluate,clean; Windowsrun.ps1; python -m src.pipeline all |
 | Wersje / czysta kopia | requirements.txt i requirements-lock.txt; osobne venv; raport odtworzenia czystej kopii |
 | Docker slim | Dockerfile przygotowany; **silnikDocker nie jest dostępny — build/run niezweryfikowane** |
-| PublicznyGitHub + commity | Lokalne repozytorium i commity; **publiczne repozytorium nieutworzone, adres do uzupełnienia** |
+| PublicznyGitHub + commity | Publiczne repozytorium https://github.com/przemyslawp1991-collab/Projekt_ceny_mieszkan; zachowana historia commitów |
 | Prezentacja10–15slajdów PDF |13slajdów + edytowalny PPTX; notatki i plan10minut |
 | Demo + podsumowanie1strona |03_modeling.ipynb API demo, app.py, podsumowanie_1_strona.pdf |
 | GreenIT | Rzeczywiste czasy i rozmiary;2wątki; brak fikcyjnej emisjiCO₂ |
