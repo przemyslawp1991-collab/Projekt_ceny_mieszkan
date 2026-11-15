@@ -1,0 +1,88 @@
+{
+  "created": "2026-11-15",
+  "files": [
+    {
+      "file": "NBP_prices.xlsx",
+      "kind": "direct_file",
+      "url": "https://static.nbp.pl/dane/rynek-nieruchomosci/ceny_mieszkan.xlsx",
+      "provider": "NBP BaRN",
+      "license_note": "NBP terms; attribution; data license separate from code",
+      "sha256": "841d6322268e7a3941b7e17e916eb9d8fe31ff16c547c6c59eeb801327b03671",
+      "retrieved_source_date": "2026-11-14",
+      "snapshot_not_vintage": true
+    },
+    {
+      "file": "GUS_quarterly.xlsx",
+      "kind": "direct_file",
+      "url": "https://bazydanych.new.stat.gov.pl/sites/default/files/2026-03/Kwartalne_wska%C5%BAniki_makroekonomiczne_cz_II_1.xlsx",
+      "provider": "GUS",
+      "license_note": "Public statistical data, attribution to GUS",
+      "sha256": "5410abb7e683c29a9d9ba11b2c3960a1ebcd1074c34d5816c8626bc7e0892764",
+      "retrieved_source_date": "2026-11-14",
+      "snapshot_not_vintage": true
+    },
+    {
+      "file": "NBP_SLOOS.xlsx",
+      "kind": "direct_file",
+      "url": "https://static.nbp.pl/dane/rynek-kredytowy/zrodlo-net.xlsx",
+      "provider": "NBP SLOOS",
+      "license_note": "NBP terms; attribution",
+      "sha256": "19bbe797c1dec29fefa8942b4535d74246280661b412167cd59080b46d23593e",
+      "retrieved_source_date": "2026-11-14",
+      "snapshot_not_vintage": true
+    },
+    {
+      "file": "NBP_MIR.xlsx",
+      "kind": "direct_file",
+      "url": "https://static.nbp.pl/dane/statystyka/inne/stopy_proc_pl_srdW.xlsx",
+      "provider": "NBP MIR",
+      "license_note": "NBP terms; attribution",
+      "sha256": "5c741f108f6d29286955301d645ed34858c13636673b564a6a8d1c9d1ce7c09c",
+      "retrieved_source_date": "2026-11-14",
+      "snapshot_not_vintage": true
+    },
+    {
+      "file": "WS_CBPOL_PL.csv",
+      "kind": "bis_country_extract",
+      "url": "https://data.bis.org/static/bulk/WS_CBPOL_csv_flat.zip",
+      "parent_file": "WS_CBPOL_csv_flat.csv",
+      "parent_sha256": "342d3051d3f4b9cfc046c0e950a88ec8e052e0d67729c2dc187eb61896909368",
+      "filter_column": "REF_AREA:Reference area",
+      "filter_value_prefix": "PL:",
+      "provider": "BIS",
+      "license_note": "BIS data terms; attribution; no endorsement",
+      "sha256": "27b67aa5bcedbd5dcacc72d7dbfc948bcad8459c850857c45e75f6970c7b962a",
+      "snapshot_not_vintage": true
+    },
+    {
+      "file": "WS_LONG_CPI_PL.csv",
+      "kind": "bis_country_extract",
+      "url": "https://data.bis.org/static/bulk/WS_LONG_CPI_csv_flat.zip",
+      "parent_file": "WS_LONG_CPI_csv_flat.csv",
+      "parent_sha256": "db95a68d0108b82d3c85e2f762d64ae90bd54dcd104c730d5c4a41b886e63cbb",
+      "filter_column": "REF_AREA:Reference area",
+      "filter_value_prefix": "PL:",
+      "provider": "BIS",
+      "license_note": "BIS data terms; attribution; no endorsement",
+      "sha256": "2338328ac002f4ddce75cd509baefe9c1e024bc8d16bb267b806ecc306c2fdee",
+      "snapshot_not_vintage": true
+    },
+    {
+      "file": "AMRON_counts_audited.csv",
+      "kind": "audited_source_extract",
+      "url": "https://amron.pl/raporty/",
+      "provider": "AMRON-SARFiN",
+      "license_note": "Producer reports; factual extracted values; attribution. Not a blanket open license for reports.",
+      "sha256": "1da65baa014ee11aa62e0ac81b402ea6ee0d274c363a30c9d4371f24384598d4",
+      "notes": "71 quarters.2020Q4=53756 confirmed by2021Q4report p17 and2020 annualtotal204170. Code checks annual totals; extraction source page retained. Source snapshot extract supplied with hash."
+    },
+    {
+      "file": "NBP_release_calendar.json",
+      "kind": "audited_source_extract",
+      "provider": "NBP",
+      "url": "https://nbp.pl/publikacje/cykliczne-materialy-analityczne-nbp/rynek-nieruchomosci/informacja-kwartalna/",
+      "sha256": "8b6a8ce4a2f02f1792698df76fde0c3efe791b91e46ac8b42abb77368bcb6101",
+      "license_note": "Edition months from original reports; no original day-level vintage guarantee"
+    }
+  ]
+}
