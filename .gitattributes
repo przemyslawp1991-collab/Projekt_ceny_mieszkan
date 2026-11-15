@@ -1,0 +1,2 @@
+# Frozen datasets are hashed byte-for-byte. Never convert their line endings.
+data/** -text
