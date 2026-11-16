@@ -41,7 +41,7 @@ NBP BaRN, GUS, BIS, NBP MIR/SLOOS, AMRON-SARFiN.9337surowych odczytów cen/ofert
 Python3.13; w dostarczonym folderze istnieje gotowe lokalne `.venv`.
 
 ```powershell
-cd 'C:\Users\Przemysław Pawlak\Desktop\Projekt_ceny_mieszkan'
+cd 'C:\Users\Przemysław Pawlak\Desktop\Projekt DS gotowy\Projekt_ceny_mieszkan'
 .\run.ps1 all
 .\run.ps1 test
 .\run.ps1 api
@@ -64,7 +64,9 @@ Linux/macOS: `python3.13 -m venv .venv`, aktywacja, `pip install -r requirements
 
 ## API i demo
 
-API: http://127.0.0.1:8000/docs . Przykład:
+Panel użytkownika: **http://127.0.0.1:8000/**. Zawiera wybór miasta i rynku, karty z cenami, wykres, tabelę prognoz, pobieranie CSV oraz objaśnienie wiarygodności wyników. Działa bez osobnego serwera frontendu i bez zewnętrznych bibliotek wykresów.
+
+Dokumentacja techniczna API: http://127.0.0.1:8000/docs . Przykład:
 
 ```powershell
 Invoke-RestMethod -Method Post -Uri http://127.0.0.1:8000/predict -ContentType 'application/json; charset=utf-8' -Body '{"area":"Warszawa","market":"secondary"}'

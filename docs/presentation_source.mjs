@@ -1,9 +1,9 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import {pathToFileURL} from 'node:url';
+import {pathToFileURL,fileURLToPath} from 'node:url';
 import {Presentation,PresentationFile,registerPdfFontFace} from '@oai/artifact-tool';
 const home=process.env.USERPROFILE;
-const project=path.join(home,'Desktop','Projekt_ceny_mieszkan');
+const project=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const workspace=process.cwd();
 const tmp=path.join(workspace,'work','price_deck');
 const out=path.join(workspace,'outputs','price_project');

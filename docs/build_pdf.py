@@ -19,11 +19,7 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 import matplotlib
 
-P = (
-    Path(__file__).resolve().parents[1]
-    if Path(__file__).parent.name == "docs"
-    else Path.home() / "Desktop/Projekt_ceny_mieszkan"
-)
+P = Path(__file__).resolve().parents[1]
 font = Path(matplotlib.get_data_path()) / "fonts/ttf"
 pdfmetrics.registerFont(TTFont("Body", str(font / "DejaVuSans.ttf")))
 pdfmetrics.registerFont(TTFont("BodyBold", str(font / "DejaVuSans-Bold.ttf")))

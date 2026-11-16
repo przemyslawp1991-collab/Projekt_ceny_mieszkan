@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#163d3b">
+  <title>Dom / Data — prognozy cen mieszkań</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23163d3b'/%3E%3Cpath d='M10 21L20 12L30 21V31H10Z' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/dashboard.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="/" aria-label="Dom Data — strona główna"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M5 18 18 6l13 12M9 16v14h18V16M16 30V20h6v10"/></svg><span>dom<span class="slash"> / </span>data</span></a>
+    <div class="sidebar-label">PRZEGLĄD RYNKU</div>
+    <a class="nav-item active" href="#overview"><span aria-hidden="true">◫</span> Prognoza cen</a>
+    <a class="nav-item" href="#interpretation"><span aria-hidden="true">ⓘ</span> Jak czytać wyniki</a>
+    <div class="sidebar-bottom"><div class="research-dot"></div><strong>Projekt Data Science</strong><p>Publiczne dane.<br>Sprawdzalne założenia.</p><a href="/docs" target="_blank" rel="noopener">Dokumentacja API <span aria-hidden="true">↗</span></a></div>
+  </aside>
+  <main id="overview">
+    <header class="topbar"><span>POLSKA <span class="topbar-divider">/</span> NIERUCHOMOŚCI MIESZKANIOWE</span><span class="snapshot-pill">Scenariusz badawczy</span></header>
+    <section class="intro"><div><div class="eyebrow">DANE, KTÓRE POMAGAJĄ ZROZUMIEĆ RYNEK</div><h1>Ceny mieszkań.<br><span>Spójrz na kolejne kwartały.</span></h1><p>Sprawdź prognozowaną ścieżkę średnich cen transakcyjnych<br class="desktop-break"> dla wybranego miasta i rodzaju rynku.</p></div><div class="coverage"><strong id="city-count">17</strong><span>miast w analizie</span><div>2 rynki <span>·</span> 5 punktów ścieżki</div></div></section>
+    <section class="controls" aria-label="Wybór rynku">
+      <div class="city-field"><label for="city">MIASTO</label><select id="city" disabled><option>Wczytywanie miast…</option></select></div>
+      <div class="market-field"><label id="market-label">RYNEK MIESZKAŃ</label><div class="segmented" role="group" aria-labelledby="market-label"><button type="button" data-market="secondary" aria-pressed="true">Wtórny</button><button type="button" data-market="primary" aria-pressed="false">Pierwotny</button></div></div>
+      <div class="reference"><span>KWARTAŁ ODNIESIENIA</span><strong id="reference">—</strong></div>
+    </section>
+    <div id="error" class="error" role="alert" hidden></div>
+    <div id="results" aria-busy="true" class="loading">
+      <section class="metrics" aria-label="Najważniejsze wartości">
+        <article class="metric"><div class="metric-top"><span>Ostatnia znana cena</span><span class="metric-icon" aria-hidden="true">◷</span></div><div class="metric-value"><span id="known">—</span><small>zł/m²</small></div><div class="metric-foot">Odczyt NBP <strong id="known-quarter">—</strong></div></article>
+        <article class="metric"><div class="metric-top"><span>Kwartał odniesienia</span><span class="small-tag">NOWCAST</span></div><div class="metric-value"><span id="first">—</span><small>zł/m²</small></div><div class="metric-foot">Estymacja dla <strong id="first-quarter">—</strong></div></article>
+        <article class="metric featured"><div class="metric-top"><span>Koniec prognozowanej ścieżki</span><span aria-hidden="true">↗</span></div><div class="metric-value"><span id="last">—</span><small>zł/m²</small></div><div class="metric-foot"><strong id="last-quarter">—</strong><span id="change" class="change">—</span></div></article>
+      </section>
+      <section class="chart-card"><div class="section-heading"><div><div class="eyebrow">PERSPEKTYWA CENOWA</div><h2 id="chart-title">Ścieżka cen</h2></div><button id="download" class="download" type="button" disabled>↓ <span>Pobierz CSV</span></button></div><div class="chart-meta"><span>Cena za m² · PLN</span><div class="legend"><span><i class="legend-dot known-dot"></i> Ostatni odczyt</span><span><i class="legend-line"></i> Scenariusz modelu</span></div></div><div id="chart" class="chart-container" role="img" aria-label="Wykres prognozowanych cen"></div><div id="chart-description" class="chart-description" aria-live="polite"></div><div class="chart-note"><span aria-hidden="true">ⓘ</span> Linia łączy punkty kwartalne. Model nie wyznacza skalibrowanego przedziału przyszłych cen.</div></section>
+      <section class="lower-grid"><article class="table-card"><div class="section-heading"><div><div class="eyebrow">KWARTAŁ PO KWARTALE</div><h2>Prognoza w liczbach</h2></div><span class="table-unit">PLN / m²</span></div><div class="table-scroll"><table><thead><tr><th>Okres</th><th>Cena</th><th>Od znanej ceny</th><th>Rodzaj</th></tr></thead><tbody id="forecast-table"></tbody></table></div></article><article class="context-card"><div class="eyebrow">ZANIM ZINTERPRETUJESZ WYNIK</div><h2>Scenariusz,<br>nie pewność.</h2><p>To prognoza średniej miejskiej. Cena konkretnego mieszkania zależy także od jego lokalizacji, standardu i parametrów.</p><div class="context-rule"></div><strong>Historyczne odniesienie</strong><p>Scenariusz przygotowano <span id="issued">15.11.2026</span>, po kwartale odniesienia. Dane nie aktualizują się automatycznie.</p><a href="#interpretation">Więcej o wiarygodności <span aria-hidden="true">↓</span></a></article></section>
+    </div>
+    <section id="interpretation" class="interpretation"><div><div class="eyebrow">WIARYGODNOŚĆ I OGRANICZENIA</div><h2>Co mówi ostatni sprawdzian?</h2><p>Na ostatniej sprawdzonej dacie model przegrał z prostym założeniem niezmienionej ceny. Historyczna poprawa nie potwierdza stabilnej przewagi w przyszłości.</p><span id="evaluation-period" class="evaluation-period">Ocena końca ścieżki · origin 2025Q2 → cel 2026Q2</span></div><div class="evaluation"><div><strong id="model-error">—</strong><span>Błąd modelu MAPE</span></div><div><strong id="baseline-error">—</strong><span>Błąd ostatniej ceny MAPE</span></div></div></section>
+    <details class="method"><summary>Jak czytać tę prognozę?</summary><div><p><strong>Kwartał odniesienia:</strong> początek prezentowanej ścieżki. Jego cena jest estymacją (nowcastem), ponieważ publikacje cen mają opóźnienie.</p><p><strong>Zmiana procentowa:</strong> odnosi każdą cenę do ostatniej znanej ceny wejściowej. Nie jest stopą zwrotu w jednym kwartale ani obietnicą zysku.</p><p><strong>MAPE:</strong> średni bezwzględny błąd procentowy. Niższa wartość oznacza lepszą prognozę. Pokazany sprawdzian dotyczy całego panelu, a nie tylko wybranego miasta. Historia była wcześniej analizowana; nie jest to niezależny test prospektywny.</p><p><strong>Zakres:</strong> 17 miast, rynek pierwotny i wtórny. Model nie przewiduje czasu sprzedaży i nie daje rekomendacji kupna lub sprzedaży.</p></div></details>
+    <footer><span><strong>dom / data</strong> <span class="footer-sep">·</span> Projekt zaliczeniowy Data Science</span><span>Źródła: NBP · GUS · BIS · AMRON-SARFiN</span></footer>
+  </main>
+</body>
+</html>

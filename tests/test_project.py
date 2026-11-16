@@ -76,3 +76,21 @@ def test_original_model_reproduction():
     r = json.loads((TABLES / "legacy_reproduction.json").read_text())
     assert r["max_price_difference_pln_m2"] < 1e-7
     assert abs(r["historical_h4_MAPE_pct"] - 5.6006585633) < 1e-7
+
+
+def test_dashboard_catalog_and_assets():
+    client = TestClient(app)
+    page = client.get("/")
+    assert page.status_code == 200
+    assert 'id="forecast-table"' in page.text
+    for asset in ["/static/style.css", "/static/dashboard.js"]:
+        assert client.get(asset).status_code == 200
+    catalog = client.get("/catalog").json()
+    assert len(catalog["areas"]) == 17
+    assert "Warszawa" in catalog["areas"]
+    result = client.post(
+        "/predict", json={"area": "Warszawa", "market": "secondary"}
+    ).json()
+    assert catalog["reference_origin"] == result["reference_origin"]
+    assert catalog["evaluation"]["model_mape"] > 0
+    assert client.get("/docs").status_code == 200
