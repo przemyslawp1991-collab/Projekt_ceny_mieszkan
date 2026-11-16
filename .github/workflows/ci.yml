@@ -9,3 +9,22 @@ jobs:
         with: {python-version: '3.13'}
       - run: pip install -r requirements.txt
       - run: python -m pytest -q
+  docker:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker compose config --quiet
+      - run: docker compose build
+      - name: Run tests inside the image
+        run: docker compose run --rm --no-deps api python -m pytest -q
+      - name: Start API and wait for health check
+        run: docker compose up -d --wait --wait-timeout 120
+      - name: Check panel and predictions over HTTP
+        run: python3 tests/smoke_http.py --wait 60
+      - name: Show container logs
+        if: always()
+        run: docker compose logs --no-color
+      - name: Stop test containers
+        if: always()
+        run: docker compose down

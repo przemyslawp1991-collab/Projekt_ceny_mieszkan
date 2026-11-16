@@ -76,7 +76,9 @@ Schemat odrzuca nieznane miasta, niepoprawny rynek i dodatkowe pola. Wynik:5cen 
 
 Streamlit: `python -m streamlit run app.py`, http://localhost:8501 . Skrypt CLI: `python -m src.predict --area Warszawa --market secondary`.
 
-Docker: `docker build -t ceny-mieszkan .`, `docker run --rm -p 8000:8000 ceny-mieszkan`. **Plik przygotowany, obraz niezweryfikowany lokalnie: brak silnika Docker.** GitHub Actions uruchamia testy po push i pull request. Repozytorium publiczne: https://github.com/przemyslawp1991-collab/Projekt_ceny_mieszkan; zachowano rzeczywistą historię lokalnych commitów etapów. Bieżące wyniki CI są widoczne w zakładce Actions.
+Docker: po zainstalowaniu i uruchomieniu Docker Desktop wykonaj **`docker compose up --build -d --wait`** z folderu projektu. Panel: http://127.0.0.1:8000/ . Zatrzymanie: `docker compose down`. Pełna instrukcja: [docs/DOCKER.md](docs/DOCKER.md). W tym komputerze nie wykryto lokalnego silnika Docker; konfiguracja kontenera jest weryfikowana przez osobne zadanie `docker` w GitHub Actions, obejmujące budowanie, testy w obrazie oraz rzeczywiste żądania HTTP do uruchomionej aplikacji. Wynik danego przebiegu jest widoczny w zakładce Actions.
+
+GitHub Actions uruchamia testy po push i pull request. Repozytorium publiczne: https://github.com/przemyslawp1991-collab/Projekt_ceny_mieszkan; zachowano rzeczywistą historię lokalnych commitów etapów.
 
 ## Odtwarzalność, temporal split, interpretacja
 

@@ -1,4 +1,4 @@
-# Wymagania zaliczenia — status15.11.2026
+# Wymagania zaliczenia — status 16.11.2026
 
 Dokument odniesienia: wymagania_kursu.pdf (kopia oryginalnego PDF użytkownika). Ta tabela nie stanowi gwarancji oceny prowadzącego.
 
@@ -17,14 +17,15 @@ Dokument odniesienia: wymagania_kursu.pdf (kopia oryginalnego PDF użytkownika).
 | Metryki i segmenty | MAPE/MAE/RMSE; market/city/origin/horizon; porażka na2025Q2ujawniona |
 | Model + metadane + seed | models/model.pkl, metadata.json, protocol.json, configseed42 |
 | FastAPI /predict + Pydantic | api/app.py, obsługa błędów422, endpoint /health |
-| Dwa elementy end-to-end | Interaktywny Streamlit + walidacja schematu Pydantic; dodatkowo workflowCI |
-| Testy pytest | tests/test_project.py; raport w reports/logs |
+| Dwa elementy end-to-end | Panel WWW pod adresem głównym API: wybór miasta/rynku, wykres, tabela i CSV; walidacja Pydantic. Dodatkowo Streamlit i workflow CI |
+| Testy pytest | 9 testów, w tym kontrakt panelu, katalog miast i pliki statyczne. Testy po publikacji interfejsu przeszły na GitHub Actions; historyczne logi pierwszej wersji obejmują 8 testów |
 | Makefile / one-command | all,data,train,evaluate,clean; Windowsrun.ps1; python -m src.pipeline all |
 | Wersje / czysta kopia | requirements.txt i requirements-lock.txt; osobne venv; raport odtworzenia czystej kopii |
-| Docker slim | Dockerfile przygotowany; **silnikDocker nie jest dostępny — build/run niezweryfikowane** |
+| Docker slim | Dockerfile na python:3.13-slim, compose.yaml i docs/DOCKER.md. Zadanie `docker` w CI buduje obraz, uruchamia testy w kontenerze i sprawdza API przez HTTP. Lokalny silnik Docker nie jest zainstalowany; wynik walidacji zdalnej wskazuje odpowiedni przebieg Actions |
 | PublicznyGitHub + commity | Publiczne repozytorium https://github.com/przemyslawp1991-collab/Projekt_ceny_mieszkan; zachowana historia commitów |
 | Prezentacja10–15slajdów PDF |13slajdów + edytowalny PPTX; notatki i plan10minut |
 | Demo + podsumowanie1strona |03_modeling.ipynb API demo, app.py, podsumowanie_1_strona.pdf |
+| Opis przebiegu projektu do druku | reports/Raport_realizacji_projektu_krok_po_kroku.pdf — 7 stron, 16 etapów |
 | GreenIT | Rzeczywiste czasy i rozmiary;2wątki; brak fikcyjnej emisjiCO₂ |
 
 Nie poprawiano wyników po obejrzeniu końcowego testu. Słabszy wynik jest wnioskiem projektu, a nie powodem do ukrycia baseline.
